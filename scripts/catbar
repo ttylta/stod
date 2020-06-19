@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar hostcat &
+    MONITOR=$m polybar hostcat2 &
+    MONITOR=$m polybar hostcat3 &
+    MONITOR=$m polybar hostcat4 &
+    MONITOR=$m polybar hostcat5 &
+    MONITOR=$m polybar hostcat6 &
+  done
+else
+  polybar hostcat &
+  polybar hostcat2 &
+  polybar hostcat3 &
+  polybar hostcat4 &
+  polybar hostcat5 &
+  polybar hostcat6 &
+fi

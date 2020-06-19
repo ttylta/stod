@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/tt/.cache/wal/schemes'
+let g:netrw_dirhist_5='/home/tt/.cache/wal'
+let g:netrw_dirhist_4='/home/tt'
+let g:netrw_dirhist_3='/home/tt/scripts'
+let g:netrw_dirhist_2='/home/tt/dots/.config/bspwm'
+let g:netrw_dirhist_1='/home/tt/lib/st'

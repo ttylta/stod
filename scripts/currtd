@@ -1,0 +1,4 @@
+#! /bin/bash
+
+CURRENT=$(cat $TODOFILE | grep "^+ " | cut -c 3-)
+echo $CURRENT

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+case $i in
+	*)
+		echo "Initializing default desktop layout..."
+		{
+			~/scripts/layouts/default.sh &&
+			wal -R &&
+			~/.wm
+		} &> /dev/null;;
+esac
+
+

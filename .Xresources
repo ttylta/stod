@@ -1,0 +1,7 @@
+URxvt.font:xft:curie:size=12:antialias=false
+URxvt.letterSpace: 0.5
+URxvt.scrollBar: false
+URxvt.internalBorder:  30
+URxvt.loginShell: true
+*.border: 40
+Xcursor.size: 25
