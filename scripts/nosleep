@@ -1,0 +1,5 @@
+#! /bin/bash
+
+echo "Turning sleep off"
+xset -dpms
+xset s off

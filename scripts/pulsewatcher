@@ -1,0 +1,34 @@
+#! /bin/bash
+
+function get_volume {
+    pamixer --get-volume
+}
+
+function is_mute {
+    pamixer --get-mute
+}
+
+case $1 in
+    up)
+	if is_mute ; then
+    echo "0" >> /tmp/xobpipe
+	else
+    echo "$(get_volume)" >> /tmp/xobpipe
+	fi
+	;;
+    down)
+	if is_mute ; then
+    echo "0" >> /tmp/xobpipe
+	else
+    echo "$(get_volume)" >> /tmp/xobpipe
+	fi
+	;;
+    mute)
+    	# Toggle mute
+	if is_mute ; then
+    echo "0" >> /tmp/xobpipe
+	else
+    echo "$(get_volume)" >> /tmp/xobpipe
+	fi
+	;;
+esac

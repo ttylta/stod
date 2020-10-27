@@ -1,0 +1,5 @@
+#! /bin/bash
+
+. "${HOME}/.cache/wal/colors.sh"
+
+hostcat | dzen2 -l 5 -p -bg "$color9" -w 400 -y 15 -x 15 -fn 'curie:bold:pixelsize=13' -e 'onstart=uncollapse,lower'

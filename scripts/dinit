@@ -5,7 +5,7 @@ case $i in
 		echo "Initializing default desktop layout..."
 		{
 			~/scripts/layouts/default.sh &&
-			wal -R &&
+			wal -R -n &&
 			~/.wm
 		} &> /dev/null;;
 esac

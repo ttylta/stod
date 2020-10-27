@@ -1,0 +1,8 @@
+#! /bin/bash
+
+if [[ -e '/tmp/xobpipe' ]]; then
+  tail -f /tmp/xobpipe | xob
+else
+  mkfifo /tmp/xobpipe
+  tail -f /tmp/xobpipe | xob
+fi

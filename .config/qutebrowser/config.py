@@ -11,7 +11,8 @@ c.fonts.messages.info = font
 c.fonts.messages.warning = font
 c.fonts.prompts = font
 c.fonts.statusbar = font
-c.fonts.tabs = font
+c.fonts.tabs.selected = font
+c.fonts.tabs.unselected = font
 
 #tabs
 c.tabs.favicons.show = "never"

@@ -17,11 +17,13 @@ xsetroot -cursor_name left_ptr
 xcalib -d :0 ~/dots/icc/B156HTN03_4_01.icm
 wal -R -n
 hsetroot -solid "$color9"
-catbar
 
+dzencat &
 xbindkeys &
 picom &
 st &
 dunst &
 blueman-applet &
+plaunch &
+startxob &
 exec bspwm

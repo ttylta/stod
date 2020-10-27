@@ -28,107 +28,20 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/hostcat]
+[bar/time]
 monitor = ${env:MONITOR:}
 override-redirect = true
-width = 300
-offset-x = 30
-offset-y = 30
-height = 13
-
-background = ${colors.color9}
+width = 80
+offset-x = 100%:-115
+bottom = true
+offset-y = 35
+height = 35
+background = ${colors.color4}
 foreground = ${colors.foreground}
 
 font-0 = curie:bold:pixelsize=12;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-modules-left = hostcat1
+modules-center = date
 wm-restack=bspwm
-
-[bar/hostcat2]
-monitor = ${env:MONITOR:}
-override-redirect = true
-width = 300
-offset-x = 30
-offset-y = 42
-height = 13
-wm-restack=bspwm
-
-background = ${colors.color9}
-foreground = ${colors.foreground}
-
-font-0 = curie:bold:pixelsize=12;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-modules-left = hostcat2
-
-[bar/hostcat3]
-monitor = ${env:MONITOR:}
-override-redirect = true
-width = 300
-offset-x = 30
-offset-y = 54
-height = 13
-
-background = ${colors.color9}
-foreground = ${colors.foreground}
-
-font-0 = curie:bold:pixelsize=12;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-modules-left = hostcat3
-wm-restack=bspwm
-
-[bar/hostcat4]
-monitor = ${env:MONITOR:}
-override-redirect = true
-width = 300
-offset-x = 30
-offset-y = 66
-height = 13
-
-wm-restack=bspwm
-background = ${colors.color9}
-foreground = ${colors.foreground}
-
-font-0 = curie:bold:pixelsize=12;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-modules-left = hostcat4
-
-[bar/hostcat5]
-monitor = ${env:MONITOR:}
-override-redirect = true
-width = 300
-offset-x = 30
-offset-y = 78
-height = 13
-
-wm-restack=bspwm
-background = ${colors.color9}
-foreground = ${colors.foreground}
-
-font-0 = curie:bold:pixelsize=12;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-modules-left = hostcat5
-
-[bar/hostcat6]
-monitor = ${env:MONITOR:}
-override-redirect = true
-width = 300
-offset-x = 30
-offset-y = 90
-height = 13
-
-wm-restack=bspwm
-background = ${colors.color9}
-foreground = ${colors.foreground}
-
-font-0 = curie:bold:pixelsize=12;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-modules-left = hostcat6
 
 [bar/bottom]
 ;monitor = ${env:MONITOR:}
@@ -137,14 +50,14 @@ bottom = true
 offset-x = 30
 offset-y = 30
 height = 35
-padding-right =6
 wm-restack=bspwm
-background = #00000000
+background = ${colors.background}
 foreground = ${colors.foreground}
 font-0 = curie:pixelsize=12;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 modules-left = currenttodo
+width = 200
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -382,8 +295,9 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
-date-alt = " %Y-%m-%d"
+date = "~"
+date-alt = "%Y-%m-%d"
+date-foreground = ${colors.color2}
 
 time = %H:%M
 time-alt = %H:%M:%S

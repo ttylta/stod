@@ -1,0 +1,15 @@
+#! /bin/bash
+
+ARISTODEMUS="10.0.0.5"
+
+case "$1" in
+	"aristodemus")
+		echo "Connecting to aristodemus..."
+		{
+      sshfs tt@${ARISTODEMUS}:/home/tt ~/remote/aristodemus
+    };;
+  *)
+    echo \"$1\"
+    echo "is an invalid command.";;
+esac
+
